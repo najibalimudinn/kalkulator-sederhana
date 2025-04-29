@@ -37,13 +37,7 @@ public class Controller {
         }
 
         // Hitung hasil sesuai dengan operasi yang dipilih
-        hasil = switch (operasi) {
-            case '+' -> Tambah.tambah(a, b);
-            case '-' -> Kurang.kurang(a, b);
-            case '*' -> Kali.kali(a, b);
-            case '/' -> Bagi.bagi(a, b);
-            default -> 0;
-        };
+        hasil = Operation.calculate(a, b, operasi);
 
         // Tampilkan hasil
         return hasil;
