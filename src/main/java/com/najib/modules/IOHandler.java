@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class IOHandler {
     public record InputAngka(String a, String b) {}
 
-    public static InputAngka inputNomer() {
+    public static InputAngka inputNomor() {
         Scanner scanner = new Scanner(System.in);
         System.out.print(cetakPesanInputNomor());
         return new InputAngka(scanner.next(), scanner.next());
