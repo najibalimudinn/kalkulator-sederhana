@@ -5,11 +5,8 @@ import org.junit.jupiter.api.*;
 
 class kaliTest {
 
-    Operator operator;
-
     @BeforeEach
     void setUp() {
-        operator = new Operator(); // Gunakan implementasi asli
     }
 
     @Test
@@ -19,7 +16,7 @@ class kaliTest {
         int b = 8;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(16, hasil);
@@ -32,7 +29,7 @@ class kaliTest {
         int b = -7;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(-35, hasil);
@@ -45,7 +42,7 @@ class kaliTest {
         int b = 7;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(-35, hasil);
@@ -58,7 +55,7 @@ class kaliTest {
         int b = 3;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(0, hasil);
@@ -71,7 +68,7 @@ class kaliTest {
         int b = -3;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(0, hasil);
@@ -84,7 +81,7 @@ class kaliTest {
         int b = -2;
 
         //exercise
-        int hasil = operator.kali(a, b);
+        int hasil = Operator.kali(a, b);
 
         //verify
         assertEquals(8, hasil);

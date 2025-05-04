@@ -5,11 +5,8 @@ import org.junit.jupiter.api.*;
 
 class tambahTest {
 
-    Operator operator;
-
     @BeforeEach
     void setUp() {
-        operator = new Operator();
     }
 
     @Test
@@ -19,7 +16,7 @@ class tambahTest {
         int b = 8;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(10, hasil);
@@ -32,7 +29,7 @@ class tambahTest {
         int b = -7;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(-2, hasil);
@@ -45,7 +42,7 @@ class tambahTest {
         int b = 7;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(2, hasil);
@@ -58,7 +55,7 @@ class tambahTest {
         int b = 3;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(3, hasil);
@@ -71,7 +68,7 @@ class tambahTest {
         int b = -3;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(-3, hasil);
@@ -84,7 +81,7 @@ class tambahTest {
         int b = -2;
 
         //exercise
-        int hasil = operator.tambah(a, b);
+        int hasil = Operator.tambah(a, b);
 
         //verify
         assertEquals(-6, hasil);

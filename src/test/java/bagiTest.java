@@ -5,11 +5,8 @@ import org.junit.jupiter.api.*;
 
 class bagiTest {
 
-    Operator operator;
-
     @BeforeEach
     void setUp() {
-        operator = new Operator(); // Gunakan implementasi asli
     }
 
     @Test
@@ -19,7 +16,7 @@ class bagiTest {
         int b = 2;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(4, hasil);
@@ -32,7 +29,7 @@ class bagiTest {
         int b = -7;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(-2, hasil);
@@ -45,7 +42,7 @@ class bagiTest {
         int b = 2;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(-3.5, hasil);
@@ -58,7 +55,7 @@ class bagiTest {
         int b = 3;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(0, hasil);
@@ -71,7 +68,7 @@ class bagiTest {
         int b = -3;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(0, hasil);
@@ -84,7 +81,7 @@ class bagiTest {
         int b = -2;
 
         //exercise
-        int hasil = operator.bagi(a, b);
+        int hasil = Operator.bagi(a, b);
 
         //verify
         assertEquals(2, hasil);

@@ -5,11 +5,8 @@ import org.junit.jupiter.api.*;
 
 class kurangTest {
 
-    Operator operator;
-
     @BeforeEach
     void setUp() {
-        operator = new Operator(); // Gunakan implementasi asli
     }
 
     @Test
@@ -19,7 +16,7 @@ class kurangTest {
         int b = 8;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(-6, hasil);
@@ -32,7 +29,7 @@ class kurangTest {
         int b = -7;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(12, hasil);
@@ -45,7 +42,7 @@ class kurangTest {
         int b = 7;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(-12, hasil);
@@ -58,7 +55,7 @@ class kurangTest {
         int b = 3;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(-3, hasil);
@@ -71,7 +68,7 @@ class kurangTest {
         int b = -3;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(3, hasil);
@@ -84,7 +81,7 @@ class kurangTest {
         int b = -2;
 
         //exercise
-        int hasil = operator.kurang(a, b);
+        int hasil = Operator.kurang(a, b);
 
         //verify
         assertEquals(-2, hasil);
