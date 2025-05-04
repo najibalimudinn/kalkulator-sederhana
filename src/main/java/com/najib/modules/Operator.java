@@ -17,7 +17,7 @@ public class Operator {
         return a / b;
     }
 
-    public static int calculate(int a, int b, char operator) {
+    public static int hitung(int a, int b, char operator) {
         int hasil = 0;
         switch (operator) {
             case '+':

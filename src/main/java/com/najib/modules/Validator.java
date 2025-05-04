@@ -1,17 +1,17 @@
 package com.najib.modules;
 
-import static com.najib.modules.IOHandler.printDataTypeError;
-import static com.najib.modules.IOHandler.printRangeError;
-import static com.najib.modules.IOHandler.printOperatorError;
-import static com.najib.modules.IOHandler.printDivisionByZeroError;
+import static com.najib.modules.IOHandler.cetakErrorTipeData;
+import static com.najib.modules.IOHandler.cetakErrorRentang;
+import static com.najib.modules.IOHandler.cetakErrorOperator;
+import static com.najib.modules.IOHandler.cetakErrorPembagiNol;
 
 public class Validator {
-    public static boolean validateDataType(String input_a, String input_b) {
+    public static boolean validasiTipeData(String input_a, String input_b) {
         // Validasi input harus angka
         boolean isValid;
 
         if (!input_a.matches("-?\\d+") || !input_b.matches("-?\\d+")) {
-            printDataTypeError();
+            cetakErrorTipeData();
             isValid = false;
         } else {
             isValid = true;
@@ -20,12 +20,12 @@ public class Validator {
         return isValid;
     }
 
-    public static boolean validateRange(int a, int b) {
+    public static boolean validasiRentang(int a, int b) {
         // Validasi rentang nilai
         boolean isValid;
 
         if (a < -32768 || a > 32767 || b < -32768 || b > 32767) {
-            printRangeError();
+            cetakErrorRentang();
             isValid = false;
         } else {
             isValid = true;
@@ -34,12 +34,12 @@ public class Validator {
         return isValid;
     }
 
-    public static boolean validateOperator(char operator) {
+    public static boolean validasiOperator(char operator) {
         // Validasi operator
         boolean isValid;
 
         if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
-            printOperatorError();
+            cetakErrorOperator();
             isValid = false;
         } else {
             isValid = true;
@@ -48,12 +48,12 @@ public class Validator {
         return isValid;
     }
 
-    public static boolean validateDivisionByZero(int b) {
-        // Validasi pembagian dengan nol
+    public static boolean validasiPembagiBukanNol(int b) {
+        // Validasi pembagian bukan dengan nol
         boolean isValid;
 
         if (b == 0) {
-            printDivisionByZeroError();
+            cetakErrorPembagiNol();
             isValid = false;
         } else {
             isValid = true;
@@ -62,18 +62,18 @@ public class Validator {
         return isValid;
     }
 
-    public static boolean validate(String input_a, String input_b, char operator) {
+    public static boolean validasi(String input_a, String input_b, char operator) {
         boolean isValid = false;
-        isValid = validateDataType(input_a, input_b);
+        isValid = validasiTipeData(input_a, input_b);
 
         if (isValid) {
             int a = Integer.parseInt(input_a);
             int b = Integer.parseInt(input_b);
-            isValid = validateRange(a, b);
+            isValid = validasiRentang(a, b);
             if (isValid) {
-                isValid = validateOperator(operator);
+                isValid = validasiOperator(operator);
                 if (isValid && operator == '/') {
-                    isValid = validateDivisionByZero(b);
+                    isValid = validasiPembagiBukanNol(b);
                 }
             }
         }
