@@ -11,7 +11,7 @@ public class Validator {
         boolean isValid;
 
         if (!input_a.matches("-?\\d+") || !input_b.matches("-?\\d+")) {
-            cetakErrorTipeData();
+            System.out.println("\n" + cetakErrorTipeData() + "\n");
             isValid = false;
         } else {
             isValid = true;
@@ -25,7 +25,7 @@ public class Validator {
         boolean isValid;
 
         if (a < -32768 || a > 32767 || b < -32768 || b > 32767) {
-            cetakErrorRentang();
+            System.out.println("\n" +cetakErrorRentang() + "\n");
             isValid = false;
         } else {
             isValid = true;
@@ -39,7 +39,7 @@ public class Validator {
         boolean isValid;
 
         if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
-            cetakErrorOperator();
+            System.out.println("\n" +cetakErrorOperator() + "\n");
             isValid = false;
         } else {
             isValid = true;
@@ -53,7 +53,7 @@ public class Validator {
         boolean isValid;
 
         if (b == 0) {
-            cetakErrorPembagiNol();
+            System.out.println("\n" +cetakErrorPembagiNol() + "\n");
             isValid = false;
         } else {
             isValid = true;

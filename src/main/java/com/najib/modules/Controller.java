@@ -4,23 +4,18 @@ import static com.najib.modules.Validator.validasi;
 import static com.najib.modules.Operator.hitung;
 import static com.najib.modules.IOHandler.inputNomer;
 import static com.najib.modules.IOHandler.inputOperator;
-import static com.najib.modules.IOHandler.input_a;
-import static com.najib.modules.IOHandler.input_b;
-import static com.najib.modules.IOHandler.operator;
-import static com.najib.modules.IOHandler.cetakHasil;
+import static com.najib.modules.IOHandler.InputAngka;
 
 public class Controller {
-    public static void runKalkulator() {
+    public static int runKalkulator() {
         while(true) {
-            inputNomer();
-            inputOperator();
+            InputAngka inputAngka = inputNomer();
+            char inputOperator = inputOperator();
 
-            if(validasi(input_a, input_b, operator)) {
-                int a = Integer.parseInt(input_a);
-                int b = Integer.parseInt(input_b);
-                int hasil = hitung(a, b, operator);
-                cetakHasil(a, b, operator, hasil);
-                break;
+            if(validasi(inputAngka.a(), inputAngka.b(), inputOperator)) {
+                int a = Integer.parseInt(inputAngka.a());
+                int b = Integer.parseInt(inputAngka.b());
+                return hitung(a, b, inputOperator);
             }
         }
     }

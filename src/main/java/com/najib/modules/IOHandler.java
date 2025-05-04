@@ -3,48 +3,45 @@ package com.najib.modules;
 import java.util.Scanner;
 
 public class IOHandler {
-    public static String input_a;
-    public static String input_b;
-    public static char operator;
+    public record InputAngka(String a, String b) {}
 
-    public static void inputNomer() {
+    public static InputAngka inputNomer() {
         Scanner scanner = new Scanner(System.in);
-        cetakPesanInputNomor();
-        input_a = scanner.next();
-        input_b = scanner.next();
+        System.out.print(cetakPesanInputNomor());
+        return new InputAngka(scanner.next(), scanner.next());
     }
 
-    public static void inputOperator() {
+    public static char inputOperator() {
         Scanner scanner = new Scanner(System.in);
-        cetakPesanInputOperator();
-        operator = scanner.next().charAt(0);
+        System.out.print(cetakPesanInputOperator());
+        return scanner.next().charAt(0);
     }
 
-    public static void cetakPesanInputNomor() {
-        System.out.print("Masukkan dua buah nilai (pisahkan dengan spasi): ");
+    public static String cetakPesanInputNomor() {
+        return "Masukkan dua buah nilai (pisahkan dengan spasi): ";
     }
 
-    public static void cetakPesanInputOperator() {
-        System.out.print("Masukkan operator (+, -, *, /): ");
+    public static String cetakPesanInputOperator() {
+        return "Masukkan operator (+, -, *, /): ";
     }
 
-    public static void cetakErrorTipeData() {
-        System.out.println("\nError: Input harus berupa angka.");
+    public static String cetakErrorTipeData() {
+        return "Error: Input harus berupa angka.";
     }
 
-    public static void cetakErrorRentang() {
-        System.out.println("\nError: Nilai di luar rentang yang diperbolehkan.");
+    public static String cetakErrorRentang() {
+        return "Error: Nilai di luar rentang yang diperbolehkan.";
     }
 
-    public static void cetakErrorOperator() {
-        System.out.println("\nError: Operator tidak valid.");
+    public static String cetakErrorOperator() {
+        return "Error: Operator tidak valid.";
     }
 
-    public static void cetakErrorPembagiNol() {
-        System.out.println("\nError: Pembagian dengan nol tidak diperbolehkan.");
+    public static String cetakErrorPembagiNol() {
+        return "Error: Pembagian dengan nol tidak diperbolehkan.";
     }
 
-    public static void cetakHasil(int a, int b, char operator, int hasil) {
-        System.out.println("\nHasil: " + a + " " + operator + " " + b + " = " + hasil);
+    public static String cetakHasil(int hasil) {
+        return "Hasil = " + hasil;
     }
 }
